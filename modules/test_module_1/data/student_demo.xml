@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="student_1" model="student.student">
+        <field name="name">John Doe</field>
+        <field name="age">22</field>
+        <field name="address">123 Main St</field>
+        <field name="phone_number">1234567890</field>
+        <field name="gender">male</field>
+        <field name="email">john.doe@example.com</field>
+        <field name="phone">1234567890</field>
+    </record>
+
+    <record id="student_2" model="student.student">
+        <field name="name">Jane Smith</field>
+        <field name="age">21</field>
+        <field name="address">456 Elm St</field>
+        <field name="phone_number">0987654321</field>
+        <field name="gender">female</field>
+        <field name="email">jane.smith@example.com</field>
+        <field name="phone">0987654321</field>
+    </record>
+
+    <record id="student_3" model="student.student">
+        <field name="name">Alex Johnson</field>
+        <field name="age">23</field>
+        <field name="address">789 Oak St</field>
+        <field name="phone_number">1122334455</field>
+        <field name="gender">other</field>
+        <field name="email">alex.johnson@example.com</field>
+        <field name="phone">1122334455</field>
+    </record>
+</odoo>

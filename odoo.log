@@ -1,0 +1,185 @@
+2024-06-01 07:32:38,119 15764 INFO ? odoo: Odoo version 17.0-20240601 
+2024-06-01 07:32:38,119 15764 INFO ? odoo: Using configuration file at D:\Odoo\server\odoo.conf 
+2024-06-01 07:32:38,119 15764 INFO ? odoo: addons paths: ['D:\\Odoo\\server\\odoo\\addons', 'd:\\odoo\\sessions\\addons\\17.0', 'd:\\odoo\\server\\odoo\\addons'] 
+2024-06-01 07:32:38,119 15764 INFO ? odoo: database: openpg@localhost:5432 
+2024-06-01 07:32:39,499 15764 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at D:\Odoo\thirdparty\wkhtmltopdf.exe 
+2024-06-01 07:32:39,790 15764 WARNING ? py.warnings: D:\Odoo\python\lib\site-packages\docutils\utils\smartquotes.py:639: DeprecationWarning: invalid escape sequence '\['
+  File "D:\Odoo\server\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\Odoo\server\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\Odoo\server\odoo\cli\server.py", line 179, in run
+    main(args)
+  File "D:\Odoo\server\odoo\cli\server.py", line 172, in main
+    rc = odoo.service.server.start(preload=preload, stop=stop)
+  File "D:\Odoo\server\odoo\service\server.py", line 1359, in start
+    load_server_wide_modules()
+  File "D:\Odoo\server\odoo\service\server.py", line 1262, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\Odoo\server\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+  File "D:\Odoo\server\odoo\addons\web\__init__.py", line 4, in <module>
+    from . import controllers
+  File "D:\Odoo\server\odoo\addons\web\controllers\__init__.py", line 4, in <module>
+    from . import binary
+  File "D:\Odoo\server\odoo\addons\web\controllers\binary.py", line 19, in <module>
+    from odoo.addons.base.models.assetsbundle import ANY_UNIQUE
+  File "D:\Odoo\server\odoo\addons\base\__init__.py", line 5, in <module>
+    from . import models
+  File "D:\Odoo\server\odoo\addons\base\models\__init__.py", line 28, in <module>
+    from . import ir_module
+  File "D:\Odoo\server\odoo\addons\base\models\ir_module.py", line 20, in <module>
+    from docutils.core import publish_string
+  File "D:\Odoo\python\lib\site-packages\docutils\core.py", line 21, in <module>
+    from docutils import frontend, io, utils, readers, writers
+  File "D:\Odoo\python\lib\site-packages\docutils\readers\__init__.py", line 15, in <module>
+    from docutils.transforms import universal
+  File "D:\Odoo\python\lib\site-packages\docutils\transforms\universal.py", line 24, in <module>
+    from docutils.utils import smartquotes
+  File "D:\Odoo\python\lib\warnings.py", line 109, in _showwarnmsg
+    sw(msg.message, msg.category, msg.filename, msg.lineno,
+  File "D:\Odoo\server\odoo\netsvc.py", line 288, in showwarning_with_traceback
+    for frame in traceback.extract_stack():
+ 
+2024-06-01 07:32:39,987 15764 WARNING ? py.warnings: D:\Odoo\python\lib\site-packages\vobject\base.py:736: DeprecationWarning: invalid escape sequence '\-'
+  File "D:\Odoo\server\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\Odoo\server\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\Odoo\server\odoo\cli\server.py", line 179, in run
+    main(args)
+  File "D:\Odoo\server\odoo\cli\server.py", line 172, in main
+    rc = odoo.service.server.start(preload=preload, stop=stop)
+  File "D:\Odoo\server\odoo\service\server.py", line 1359, in start
+    load_server_wide_modules()
+  File "D:\Odoo\server\odoo\service\server.py", line 1262, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\Odoo\server\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+  File "D:\Odoo\server\odoo\addons\web\__init__.py", line 5, in <module>
+    from . import models
+  File "D:\Odoo\server\odoo\addons\web\models\__init__.py", line 11, in <module>
+    from . import res_partner
+  File "D:\Odoo\server\odoo\addons\web\models\res_partner.py", line 12, in <module>
+    import vobject
+  File "D:\Odoo\python\lib\site-packages\vobject\__init__.py", line 79, in <module>
+    from .base import newFromBehavior, readOne, readComponents
+  File "D:\Odoo\python\lib\warnings.py", line 109, in _showwarnmsg
+    sw(msg.message, msg.category, msg.filename, msg.lineno,
+  File "D:\Odoo\server\odoo\netsvc.py", line 288, in showwarning_with_traceback
+    for frame in traceback.extract_stack():
+ 
+2024-06-01 07:32:39,989 15764 WARNING ? py.warnings: D:\Odoo\python\lib\site-packages\vobject\base.py:1219: DeprecationWarning: invalid escape sequence '\;'
+  File "D:\Odoo\server\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\Odoo\server\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\Odoo\server\odoo\cli\server.py", line 179, in run
+    main(args)
+  File "D:\Odoo\server\odoo\cli\server.py", line 172, in main
+    rc = odoo.service.server.start(preload=preload, stop=stop)
+  File "D:\Odoo\server\odoo\service\server.py", line 1359, in start
+    load_server_wide_modules()
+  File "D:\Odoo\server\odoo\service\server.py", line 1262, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\Odoo\server\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+  File "D:\Odoo\server\odoo\addons\web\__init__.py", line 5, in <module>
+    from . import models
+  File "D:\Odoo\server\odoo\addons\web\models\__init__.py", line 11, in <module>
+    from . import res_partner
+  File "D:\Odoo\server\odoo\addons\web\models\res_partner.py", line 12, in <module>
+    import vobject
+  File "D:\Odoo\python\lib\site-packages\vobject\__init__.py", line 79, in <module>
+    from .base import newFromBehavior, readOne, readComponents
+  File "D:\Odoo\python\lib\warnings.py", line 109, in _showwarnmsg
+    sw(msg.message, msg.category, msg.filename, msg.lineno,
+  File "D:\Odoo\server\odoo\netsvc.py", line 288, in showwarning_with_traceback
+    for frame in traceback.extract_stack():
+ 
+2024-06-01 07:32:39,989 15764 WARNING ? py.warnings: D:\Odoo\python\lib\site-packages\vobject\base.py:1219: DeprecationWarning: invalid escape sequence '\,'
+  File "D:\Odoo\server\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\Odoo\server\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\Odoo\server\odoo\cli\server.py", line 179, in run
+    main(args)
+  File "D:\Odoo\server\odoo\cli\server.py", line 172, in main
+    rc = odoo.service.server.start(preload=preload, stop=stop)
+  File "D:\Odoo\server\odoo\service\server.py", line 1359, in start
+    load_server_wide_modules()
+  File "D:\Odoo\server\odoo\service\server.py", line 1262, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\Odoo\server\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+  File "D:\Odoo\server\odoo\addons\web\__init__.py", line 5, in <module>
+    from . import models
+  File "D:\Odoo\server\odoo\addons\web\models\__init__.py", line 11, in <module>
+    from . import res_partner
+  File "D:\Odoo\server\odoo\addons\web\models\res_partner.py", line 12, in <module>
+    import vobject
+  File "D:\Odoo\python\lib\site-packages\vobject\__init__.py", line 79, in <module>
+    from .base import newFromBehavior, readOne, readComponents
+  File "D:\Odoo\python\lib\warnings.py", line 109, in _showwarnmsg
+    sw(msg.message, msg.category, msg.filename, msg.lineno,
+  File "D:\Odoo\server\odoo\netsvc.py", line 288, in showwarning_with_traceback
+    for frame in traceback.extract_stack():
+ 
+2024-06-01 07:32:40,009 15764 INFO ? odoo.service.server: Initiating shutdown 
+2024-06-01 07:32:40,009 15764 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-06-01 07:32:45,022 20640 INFO ? odoo: Odoo version 17.0-20240601 
+2024-06-01 07:32:45,022 20640 INFO ? odoo: Using configuration file at D:\Odoo\server\odoo.conf 
+2024-06-01 07:32:45,022 20640 INFO ? odoo: addons paths: ['D:\\Odoo\\server\\odoo\\addons', 'd:\\odoo\\sessions\\addons\\17.0', 'd:\\odoo\\server\\odoo\\addons'] 
+2024-06-01 07:32:45,022 20640 INFO ? odoo: database: openpg@localhost:5432 
+2024-06-01 07:32:45,137 20640 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at D:\Odoo\thirdparty\wkhtmltopdf.exe 
+2024-06-01 07:32:45,338 20640 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:32:45,364 20640 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:32:45,377 20640 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-4SSFG6O:8069 
+2024-06-01 07:33:07,363 20640 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:33:07,379 20640 INFO ? werkzeug: 127.0.0.1 - - [01/Jun/2024 07:33:07] "GET / HTTP/1.1" 303 - 0 0.000 0.044
+2024-06-01 07:33:07,412 20640 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:33:07,438 20640 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:33:07,438 20640 INFO ? werkzeug: 127.0.0.1 - - [01/Jun/2024 07:33:07] "GET /web HTTP/1.1" 303 - 0 0.000 0.053
+2024-06-01 07:33:07,610 20640 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:33:08,422 20640 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:33:08,480 20640 INFO ? werkzeug: 127.0.0.1 - - [01/Jun/2024 07:33:08] "GET /web/database/selector HTTP/1.1" 200 - 0 0.000 0.899
+2024-06-01 07:33:11,114 20640 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:33:11,115 20640 INFO ? werkzeug: 127.0.0.1 - - [01/Jun/2024 07:33:11] "GET /web/service-worker.js HTTP/1.1" 404 - 0 0.000 0.029
+2024-06-01 07:36:45,773 19408 INFO ? odoo: Odoo version 17.0-20240601 
+2024-06-01 07:36:45,774 19408 INFO ? odoo: Using configuration file at D:\Odoo\server\odoo.conf 
+2024-06-01 07:36:45,774 19408 INFO ? odoo: addons paths: ['D:\\Odoo\\server\\odoo\\addons', 'd:\\odoo\\sessions\\addons\\17.0', 'd:\\odoo\\server\\odoo\\addons'] 
+2024-06-01 07:36:45,774 19408 INFO ? odoo: database: openpg@localhost:5432 
+2024-06-01 07:36:45,930 19408 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at D:\Odoo\thirdparty\wkhtmltopdf.exe 
+2024-06-01 07:36:46,093 19408 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:36:46,120 19408 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:36:46,157 19408 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-4SSFG6O:8069 
+2024-06-01 07:37:05,289 20640 INFO ? odoo.service.server: Initiating shutdown 
+2024-06-01 07:37:05,289 20640 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-06-01 07:37:06,373 20640 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 0 connections  
+2024-06-01 07:37:10,777 19408 INFO ? odoo.service.server: Initiating shutdown 
+2024-06-01 07:37:10,777 19408 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-06-01 07:37:11,146 19408 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 0 connections  
+2024-06-01 07:37:13,567 13764 INFO ? odoo: Odoo version 17.0-20240601 
+2024-06-01 07:37:13,568 13764 INFO ? odoo: Using configuration file at D:\Odoo\server\odoo.conf 
+2024-06-01 07:37:13,568 13764 INFO ? odoo: addons paths: ['D:\\Odoo\\server\\odoo\\addons', 'd:\\odoo\\sessions\\addons\\17.0', 'd:\\odoo\\server\\odoo\\addons'] 
+2024-06-01 07:37:13,568 13764 INFO ? odoo: database: openpg@localhost:5432 
+2024-06-01 07:37:13,736 13764 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at D:\Odoo\thirdparty\wkhtmltopdf.exe 
+2024-06-01 07:37:13,911 13764 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:37:13,937 13764 INFO ? odoo.sql_db: Connection to the database failed 
+2024-06-01 07:37:14,014 13764 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-4SSFG6O:8069 
+2024-06-01 07:37:43,282 13764 INFO ? odoo.service.server: Initiating shutdown 
+2024-06-01 07:37:43,282 13764 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-06-01 07:37:43,624 13764 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 0 connections  
+2024-06-01 07:37:51,086 13124 INFO ? odoo: Odoo version 17.0-20240601 
+2024-06-01 07:37:51,087 13124 INFO ? odoo: Using configuration file at D:\Odoo\server\odoo.conf 
+2024-06-01 07:37:51,087 13124 INFO ? odoo: addons paths: ['D:\\Odoo\\server\\odoo\\addons', 'd:\\odoo\\sessions\\addons\\17.0', 'd:\\odoo\\server\\odoo\\addons'] 
+2024-06-01 07:37:51,087 13124 INFO ? odoo: database: openpg@localhost:5432 
+2024-06-01 07:37:51,254 13124 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at D:\Odoo\thirdparty\wkhtmltopdf.exe 
+2024-06-01 07:37:51,514 13124 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-4SSFG6O:8069 
+2024-06-01 07:38:13,223 13124 INFO ? werkzeug: 127.0.0.1 - - [01/Jun/2024 07:38:13] "GET / HTTP/1.1" 303 - 1 0.003 0.046
+2024-06-01 07:38:13,519 13124 INFO ? werkzeug: 127.0.0.1 - - [01/Jun/2024 07:38:13] "GET /web HTTP/1.1" 303 - 2 0.006 0.076
+2024-06-01 07:38:14,420 13124 INFO ? werkzeug: 127.0.0.1 - - [01/Jun/2024 07:38:14] "GET /web/database/selector HTTP/1.1" 200 - 2 0.007 0.869
+2024-06-01 07:38:17,150 13124 INFO ? werkzeug: 127.0.0.1 - - [01/Jun/2024 07:38:17] "GET /web/service-worker.js HTTP/1.1" 404 - 1 0.003 0.032
+2024-06-01 07:38:31,307 13124 INFO ? odoo.service.server: Initiating shutdown 
+2024-06-01 07:38:31,307 13124 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-06-01 07:38:31,704 13124 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
