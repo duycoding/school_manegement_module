@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class Student(models.Model):
     _name = 'student.student'
@@ -15,3 +15,11 @@ class Student(models.Model):
     ], string='Gender')
     email = fields.Char(string='Email')
     phone = fields.Char(string='Phone')
+
+    def save_record(self):
+        self.ensure_one()  # Ensure only one record is processed
+        self.write({})  # Save the current record, `write({})` does nothing but triggers save
+
+    def unlink_record(self):
+        self.ensure_one()  # Ensure only one record is processed
+        self.unlink()  # Delete the current record

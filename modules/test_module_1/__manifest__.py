@@ -22,3 +22,6 @@
     'application': True,
     'license': 'LGPL-3',
 }
+# Thêm một số action, tạo mới một số chức (thêm,sửa,xóa) sinh viên, thêm điểm cho sinh viên
+# Tìm hiểu các thành phần trong view
+# view dung để cho người dùng tương tác với csdl
