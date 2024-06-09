@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_research_project_tree" model="ir.ui.view">
+        <field name="name">research.project.tree</field>
+        <field name="model">research.project</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="program"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="duration"/>
+                <button name="action_edit" string="Edit" type="object" icon="fa-pencil-square-o"/>
+                <button name="action_delete" string="Delete" type="object" icon="fa-trash"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_research_project_form" model="ir.ui.view">
+        <field name="name">research.project.form</field>
+        <field name="model">research.project</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="program"/>
+                        <field name="program_code"/>
+                    </group>
+                    <group>
+                        <field name="priority_field"/>
+                        <field name="research_field"/>
+                        <field name="research_type"/>
+                    </group>
+                    <group>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="duration"/>
+                    </group>
+                    <group string="Đơn vị của chủ nhiệm đề tài">
+                        <field name="organization_name"/>
+                        <field name="organization_phone"/>
+                        <field name="organization_email"/>
+                        <field name="organization_address"/>
+                        <field name="organization_head"/>
+                    </group>
+                    <group string="Chủ nhiệm đề tài">
+                        <field name="project_leader"/>
+                        <field name="project_leader_id"/>
+                        <field name="project_leader_title"/>
+                        <field name="project_leader_office_address"/>
+                        <field name="project_leader_office_phone"/>
+                        <field name="project_leader_degree"/>
+                        <field name="project_leader_birth_year"/>
+                        <field name="project_leader_mobile"/>
+                        <field name="project_leader_email"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_research_project_search" model="ir.ui.view">
+        <field name="name">research.project.search</field>
+        <field name="model">research.project</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="program"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_research_project" model="ir.actions.act_window">
+        <field name="name">Research Projects</field>
+        <field name="res_model">research.project</field>
+        <field name="view_mode">tree,form</field>
+        <!-- Remove view_id to allow both tree and form view -->
+        <!-- <field name="view_id" ref="view_research_project_tree"/> -->
+        <field name="search_view_id" ref="view_research_project_search"/>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_research_root" name="Research Management"/>
+    <menuitem id="menu_research_projects" name="Research Projects" parent="menu_research_root"
+              action="action_research_project" sequence="10"/>
+</odoo>

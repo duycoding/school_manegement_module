@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sample Research Projects -->
+        <record id="research_project_1" model="research.project">
+            <field name="name">Research Project 1</field>
+            <field name="code">RP001</field>
+            <field name="program">Program 1</field>
+            <field name="program_code">PC001</field>
+            <field name="priority_field">science</field>
+            <field name="research_field">natural</field>
+            <field name="research_type">basic</field>
+            <field name="start_date">2024-01-01</field>
+            <field name="end_date">2024-12-31</field>
+            <field name="organization_name">Organization 1</field>
+            <field name="organization_phone">123456789</field>
+            <field name="organization_email">org1@example.com</field>
+            <field name="organization_address">Address 1</field>
+            <field name="organization_head">Head 1</field>
+            <field name="project_leader">Leader 1</field>
+            <field name="project_leader_id">ID001</field>
+            <field name="project_leader_title">Title 1</field>
+            <field name="project_leader_office_address">Office Address 1</field>
+            <field name="project_leader_office_phone">987654321</field>
+            <field name="project_leader_degree">Degree 1</field>
+            <field name="project_leader_birth_year">1980</field>
+            <field name="project_leader_mobile">0123456789</field>
+            <field name="project_leader_email">leader1@example.com</field>
+        </record>
+        <record id="research_project_2" model="research.project">
+            <field name="name">Research Project 2</field>
+            <field name="code">RP002</field>
+            <field name="program">Program 2</field>
+            <field name="program_code">PC002</field>
+            <field name="priority_field">technology</field>
+            <field name="research_field">engineering</field>
+            <field name="research_type">application</field>
+            <field name="start_date">2024-02-01</field>
+            <field name="end_date">2024-11-30</field>
+            <field name="organization_name">Organization 2</field>
+            <field name="organization_phone">987654321</field>
+            <field name="organization_email">org2@example.com</field>
+            <field name="organization_address">Address 2</field>
+            <field name="organization_head">Head 2</field>
+            <field name="project_leader">Leader 2</field>
+            <field name="project_leader_id">ID002</field>
+            <field name="project_leader_title">Title 2</field>
+            <field name="project_leader_office_address">Office Address 2</field>
+            <field name="project_leader_office_phone">123456789</field>
+            <field name="project_leader_degree">Degree 2</field>
+            <field name="project_leader_birth_year">1975</field>
+            <field name="project_leader_mobile">0987654321</field>
+            <field name="project_leader_email">leader2@example.com</field>
+        </record>
+        <!-- Add more records as needed -->
+    </data>
+</odoo>

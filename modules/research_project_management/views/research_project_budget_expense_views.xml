@@ -1,0 +1,59 @@
+<odoo>
+    <!-- Tree View for ResearchProjectBudgetExpense -->
+    <record id="view_research_project_budget_expense_tree" model="ir.ui.view">
+        <field name="name">research.project.budget.expense.tree</field>
+        <field name="model">research.project.budget.expense</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="budget_id"/>
+                <field name="description"/>
+                <field name="unit"/>
+                <field name="quantity"/>
+                <field name="unit_price"/>
+                <field name="subtotal"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for ResearchProjectBudgetExpense -->
+    <record id="view_research_project_budget_expense_form" model="ir.ui.view">
+        <field name="name">research.project.budget.expense.form</field>
+        <field name="model">research.project.budget.expense</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="budget_id"/>
+                    <field name="description"/>
+                    <field name="unit"/>
+                    <field name="quantity"/>
+                    <field name="unit_price"/>
+                    <field name="subtotal"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View for ResearchProjectBudgetExpense -->
+    <record id="view_research_project_budget_expense_search" model="ir.ui.view">
+        <field name="name">research.project.budget.expense.search</field>
+        <field name="model">research.project.budget.expense</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="budget_id"/>
+                <field name="description"/>
+                <field name="unit"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action for ResearchProjectBudgetExpense -->
+    <record id="action_research_project_budget_expense" model="ir.actions.act_window">
+        <field name="name">Chi tiết kinh phí</field>
+        <field name="res_model">research.project.budget.expense</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_research_project_budget_expense_search"/>
+    </record>
+
+    <!-- Menu Item for ResearchProjectBudgetExpense -->
+    <menuitem id="menu_research_project_budget_expense" name="Chi tiết kinh phí" parent="menu_research_root" action="action_research_project_budget_expense" sequence="20"/>
+</odoo>

@@ -1,0 +1,68 @@
+<odoo>
+    <!-- Tree View for ResearchProjectBudget -->
+    <record id="view_research_project_budget_tree" model="ir.ui.view">
+        <field name="name">research.project.budget.tree</field>
+        <field name="model">research.project.budget</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="project_id"/>
+                <field name="name"/>
+                <field name="project_leader"/>
+                <field name="total_budget"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for ResearchProjectBudget -->
+    <record id="view_research_project_budget_form" model="ir.ui.view">
+        <field name="name">research.project.budget.form</field>
+        <field name="model">research.project.budget</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="project_id"/>
+                    <field name="name"/>
+                    <field name="project_leader"/>
+                    <field name="total_budget"/>
+                </group>
+                <notebook>
+                    <page string="Chi tiết kinh phí">
+                        <field name="expense_ids">
+                            <tree editable="bottom">
+                                <field name="description"/>
+                                <field name="unit"/>
+                                <field name="quantity"/>
+                                <field name="unit_price"/>
+                                <field name="subtotal"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View for ResearchProjectBudget -->
+    <record id="view_research_project_budget_search" model="ir.ui.view">
+        <field name="name">research.project.budget.search</field>
+        <field name="model">research.project.budget</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="project_id"/>
+                <field name="name"/>
+                <field name="project_leader"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action for ResearchProjectBudget -->
+    <record id="action_research_project_budget" model="ir.actions.act_window">
+        <field name="name">Dự toán kinh phí</field>
+        <field name="res_model">research.project.budget</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_research_project_budget_search"/>
+    </record>
+
+    <!-- Menu Item for ResearchProjectBudget -->
+    <menuitem id="menu_research_project_budget" name="Dự toán kinh phí" parent="menu_research_root" action="action_research_project_budget" sequence="10"/>
+</odoo>

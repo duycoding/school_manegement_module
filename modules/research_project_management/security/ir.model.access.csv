@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_research_project_all,research.project.all,model_research_project,,1,1,1,1
+access_research_project_budget_all,research.project.budget.all,model_research_project_budget,,1,1,1,1
+access_research_project_budget_expense_all,research.project.budget.expense.all,model_research_project_budget_expense,,1,1,1,1

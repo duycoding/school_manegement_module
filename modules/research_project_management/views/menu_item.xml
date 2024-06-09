@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_research_root" name="Research Management"/>
+    <menuitem id="menu_research_projects" name="Research Projects" parent="menu_research_root"
+              action="action_research_project" sequence="10"/>
+    <!-- Menu Item for ResearchProjectBudget -->
+    <menuitem id="menu_research_project_budget" name="Dự toán kinh phí" parent="menu_research_root"
+              action="action_research_project_budget" sequence="10"/>
+    <!-- Menu Item for ResearchProjectBudgetExpense -->
+    <menuitem id="menu_research_project_budget_expense" name="Chi tiết kinh phí" parent="menu_research_project_budget"
+              action="action_research_project_budget_expense" sequence="20"/>
+</odoo>

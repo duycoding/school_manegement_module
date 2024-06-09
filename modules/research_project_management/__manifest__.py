@@ -1,0 +1,21 @@
+{
+    'name': 'Research Project Management',
+    'version': '1.0',
+    'sequence': -100,
+    'category': 'Uncategorized',
+    'summary': 'Manage Research Projects',
+    'depends': ['base'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/research_project_views.xml',
+        'views/research_project_budget_views.xml',
+        'views/research_project_budget_expense_views.xml',
+        'views/menu_item.xml',
+        'data/data1.xml',
+        'data/data2.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+    'license': 'LGPL-3',
+}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
+    <!-- Định nghĩa các view cho student.student -->
     <record id="student_tree_view" model="ir.ui.view">
         <field name="name">student.student.tree</field>
         <field name="model">student.student</field>
@@ -72,8 +72,10 @@
         <field name="context">{}</field>
     </record>
 
-    <menuitem id="menu_student" name="Students"/>
-    <menuitem id="menu_student_tree" name="Student List" parent="menu_student"/>
+    <!-- Định nghĩa các menu -->
+    <menuitem id="menu_student_root" name="Student Management"/>
+    <menuitem id="menu_student" name="Students" parent="menu_student_root"/>
+    <menuitem id="menu_student_tree" name="Student List" parent="menu_student" action="student_action"/>
     <menuitem id="menu_student_form" name="New Student" parent="menu_student" action="student_action"/>
 
 </odoo>

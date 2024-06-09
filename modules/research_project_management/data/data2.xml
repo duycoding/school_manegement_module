@@ -1,0 +1,48 @@
+<odoo>
+    <!-- Sample Budget Records -->
+    <record id="research_project_budget_1" model="research.project.budget">
+        <field name="project_id" ref="research_project_1"/>
+        <field name="name">Nghiên cứu phát triển hệ thống AI</field>
+        <field name="project_leader">Nguyễn Văn A</field>
+    </record>
+
+    <record id="research_project_budget_2" model="research.project.budget">
+        <field name="project_id" ref="research_project_2"/>
+        <field name="name">Nghiên cứu cải tiến công nghệ sinh học</field>
+        <field name="project_leader">Trần Thị B</field>
+    </record>
+
+    <!-- Sample Budget Expense Records for Budget 1 -->
+    <record id="research_budget_expense_1_1" model="research.project.budget.expense">
+        <field name="budget_id" ref="research_project_budget_1"/>
+        <field name="description">Chi về vật tư</field>
+        <field name="unit">kg</field>
+        <field name="quantity">100</field>
+        <field name="unit_price">50000</field>
+    </record>
+
+    <record id="research_budget_expense_1_2" model="research.project.budget.expense">
+        <field name="budget_id" ref="research_project_budget_1"/>
+        <field name="description">Chi về hóa chất thí nghiệm</field>
+        <field name="unit">lit</field>
+        <field name="quantity">200</field>
+        <field name="unit_price">150000</field>
+    </record>
+
+    <!-- Sample Budget Expense Records for Budget 2 -->
+    <record id="research_budget_expense_2_1" model="research.project.budget.expense">
+        <field name="budget_id" ref="research_project_budget_2"/>
+        <field name="description">Chi tiền công trực tiếp</field>
+        <field name="unit">giờ</field>
+        <field name="quantity">300</field>
+        <field name="unit_price">100000</field>
+    </record>
+
+    <record id="research_budget_expense_2_2" model="research.project.budget.expense">
+        <field name="budget_id" ref="research_project_budget_2"/>
+        <field name="description">Chi văn phòng phẩm</field>
+        <field name="unit">bộ</field>
+        <field name="quantity">50</field>
+        <field name="unit_price">200000</field>
+    </record>
+</odoo>
