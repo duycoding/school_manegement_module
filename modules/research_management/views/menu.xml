@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Menuitem -->
+    <menuitem id="menu_research_project" name="Research Project"/>
+    <menuitem id="menu_detai" parent="menu_research_project" name="Đề tài" action="action_detai"/>
+</odoo>

@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+        <!-- Form View for TienDoThucHien -->
+        <record id="view_tiendothuchien_form" model="ir.ui.view">
+            <field name="name">tiendothuchien.form</field>
+            <field name="model">research_project.tiendothuchien</field>
+            <field name="arch" type="xml">
+                <form string="Tiến Độ Thực Hiện">
+                    <sheet>
+                        <group>
+                            <field name="noi_dung_cong_viec"/>
+                            <field name="san_pham"/>
+                            <field name="thoi_gian_bat_dau"/>
+                            <field name="thoi_gian_ket_thuc"/>
+                            <field name="nguoi_thuc_hien"/>
+                            <field name="detai_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for TienDoThucHien -->
+        <record id="view_tiendothuchien_tree" model="ir.ui.view">
+            <field name="name">tiendothuchien.tree</field>
+            <field name="model">research_project.tiendothuchien</field>
+            <field name="arch" type="xml">
+                <tree string="Tiến Độ Thực Hiện">
+                    <field name="noi_dung_cong_viec"/>
+                    <field name="san_pham"/>
+                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <field name="nguoi_thuc_hien"/>
+                    <field name="detai_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_tiendothuchien" model="ir.actions.act_window">
+            <field name="name">Tiến Độ Thực Hiện</field>
+            <field name="res_model">research_project.tiendothuchien</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menuitem for TienDoThucHien -->
+        <menuitem id="menu_research_project_tiendothuchien"
+                  name="Tiến Độ Thực Hiện"
+                  parent="menu_research_project"
+                  action="action_tiendothuchien"/>
+    </data>
+</odoo>

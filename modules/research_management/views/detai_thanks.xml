@@ -1,0 +1,11 @@
+<odoo>
+    <template id="detai_thanks">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Cảm ơn!</h1>
+                <p>Đề tài của bạn đã được tạo thành công.</p>
+            </div>
+        </t>
+    </template>
+
+</odoo>

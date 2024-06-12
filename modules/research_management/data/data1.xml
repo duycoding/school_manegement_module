@@ -1,0 +1,47 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Tạo dữ liệu mẫu cho ChuNhiemDeTai -->
+        <record id="chunhiem_sample_1" model="research_project.chunhiemdetai">
+            <field name="name">Nguyễn Văn A</field>
+            <field name="mscb">MS001</field>
+            <field name="chuc_danh_khoa_hoc">GS.TS</field>
+            <field name="hoc_vi">Tiến sĩ</field>
+            <field name="nam_sinh">1970</field>
+            <field name="dien_thoai_di_dong">0909123456</field>
+            <field name="email">nguyenvana@example.com</field>
+            <field name="dia_chi_co_quan">123 Đường Lý Tự Trọng, Quận 1, TP.HCM</field>
+            <field name="dien_thoai_co_quan">028123456</field>
+        </record>
+
+        <!-- Tạo dữ liệu mẫu cho DeTai và liên kết với ChuNhiemDeTai -->
+        <record id="detai_sample_1" model="research_project.detai">
+            <field name="name">Nghiên cứu vật liệu mới</field>
+            <field name="maso_detai">DT001</field>
+            <field name="chuong_trinh">Vật liệu</field>
+            <field name="maso_chuong_trinh">VM001</field>
+            <field name="linh_vuc_uu_tien">Công nghệ cao</field>
+            <field name="linh_vuc_nghien_cuu">Vật liệu composite</field>
+            <field name="loai_hinh_nghien_cuu">Cơ bản</field>
+            <field name="thoi_gian_bat_dau">2024-01-01</field>
+            <field name="thoi_gian_ket_thuc">2025-12-31</field>
+            <field name="don_vi_chu_nhiem">Viện Khoa học Vật liệu</field>
+            <field name="dien_thoai_don_vi">028123457</field>
+            <field name="email_don_vi">contact@materialscience.vn</field>
+            <field name="dia_chi_don_vi">123 Đường Lý Tự Trọng, Quận 1, TP.HCM</field>
+            <field name="thu_truong_don_vi">TS. Nguyễn Văn B</field>
+            <field name="tinh_cap_thiet">Nghiên cứu nhằm phát triển vật liệu mới có độ bền cao</field>
+            <field name="muc_tieu_detai">Tạo ra vật liệu composite mới với tính năng ưu việt</field>
+            <field name="doi_tuong_nghien_cuu">Vật liệu trong xây dựng và công nghiệp</field>
+            <field name="pham_vi_nghien_cuu">Toàn quốc</field>
+            <field name="cach_tiep_can">Tiếp cận đa ngành</field>
+            <field name="phuong_phap_nghien_cuu">Phân tích thí nghiệm và mô hình hóa</field>
+            <field name="san_pham">Báo cáo khoa học, bằng sáng chế</field>
+            <field name="phuong_thuc_chuyen_giao">Hội thảo, công bố quốc tế</field>
+            <field name="dia_chi_ung_dung">Các công trình xây dựng dân dụng và công nghiệp</field>
+            <field name="tac_dong">Góp phần nâng cao chất lượng vật liệu xây dựng</field>
+            <field name="kinh_phi_thuc_hien">1000000000</field>
+            <field name="nguon_kinh_phi">Ngân sách nhà nước</field>
+            <field name="chu_nhiem_detai_id" ref="chunhiem_sample_1"/>
+        </record>
+    </data>
+</odoo>

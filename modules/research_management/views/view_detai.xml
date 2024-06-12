@@ -1,0 +1,37 @@
+<odoo>
+    <template id="view_detai" name="Danh sách Đề Tài">
+        <t t-call="website.layout">
+            <div class="container mt16">
+                <h1>Danh sách Đề Tài</h1>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên Đề Tài</th>
+                                <th>Mã Số Đề Tài</th>
+                                <th>Chương Trình</th>
+                                <th>Thời Gian Bắt Đầu</th>
+                                <th>Thời Gian Kết Thúc</th>
+                                <th>Đơn Vị Chủ Nhiệm</th>
+                                <!-- Thêm các tiêu đề cột khác tại đây -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="detais" t-as="detai">
+                                <tr>
+                                    <td><t t-esc="detai.name"/></td>
+                                    <td><t t-esc="detai.maso_detai"/></td>
+                                    <td><t t-esc="detai.chuong_trinh"/></td>
+                                    <td><t t-esc="detai.thoi_gian_bat_dau"/></td>
+                                    <td><t t-esc="detai.thoi_gian_ket_thuc"/></td>
+                                    <td><t t-esc="detai.don_vi_chu_nhiem"/></td>
+                                    <!-- Thêm các trường dữ liệu khác tại đây -->
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

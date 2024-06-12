@@ -1,0 +1,30 @@
+<odoo>
+    <template id="create_detai">
+        <t t-call="website.layout">
+            <div class="container">
+                <form action="/create/webdetai" method="post">
+                    <div class="form-group">
+                        <label for="name">Tên Đề Tài</label>
+                        <input type="text" id="name" name="name" required="True" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="maso_detai">Mã Số Đề Tài</label>
+                        <input type="text" id="maso_detai" name="maso_detai" required="True" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="chuong_trinh">Chương Trình</label>
+                        <input type="text" id="chuong_trinh" name="chuong_trinh" class="form-control"/>
+                    </div>
+                    <!-- Add other fields as needed -->
+                    <div class="form-group">
+                        <label for="maso_chuong_trinh">Mã Số Chương Trình</label>
+                        <input type="text" id="maso_chuong_trinh" name="maso_chuong_trinh" class="form-control"/>
+                    </div>
+                    <!-- Repeat for other fields in the model -->
+                    <button type="submit" class="btn btn-primary">Tạo Đề Tài</button>
+                </form>
+            </div>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,21 @@
+{
+    'name': 'Research Management ',
+    'version': '1.0',
+    'sequence': -100,
+    'category': 'Uncategorized',
+    'depends': ['base','website'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/research_project_views.xml',
+        'views/create_detai.xml',
+        'views/detai_thanks.xml',
+        'views/view_detai.xml',
+        'views/kinhphithuchien_view.xml',
+        'views/tiendothuchien_view.xml',
+        'views/menu.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+    'license': 'LGPL-3',
+}

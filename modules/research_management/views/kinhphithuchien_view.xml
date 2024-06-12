@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <!-- Form View for KinhPhiThucHien -->
+        <record id="view_kinhphithuchien_form" model="ir.ui.view">
+            <field name="name">kinhphithuchien.form</field>
+            <field name="model">research_project.kinhphithuchien</field>
+            <field name="arch" type="xml">
+                <form string="Kinh Phí Thực Hiện">
+                    <sheet>
+                        <group>
+                            <field name="khoan_chi"/>
+                            <field name="tong_kinh_phi"/>
+                            <field name="nguon_kinh_phi_truong_cap"/>
+                            <field name="nguon_kinh_phi_khac"/>
+                            <field name="detai_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for KinhPhiThucHien -->
+        <record id="view_kinhphithuchien_tree" model="ir.ui.view">
+            <field name="name">kinhphithuchien.tree</field>
+            <field name="model">research_project.kinhphithuchien</field>
+            <field name="arch" type="xml">
+                <tree string="Kinh Phí Thực Hiện">
+                    <field name="khoan_chi"/>
+                    <field name="tong_kinh_phi"/>
+                    <field name="nguon_kinh_phi_truong_cap"/>
+                    <field name="nguon_kinh_phi_khac"/>
+                    <field name="detai_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_kinhphithuchien" model="ir.actions.act_window">
+            <field name="name">Kinh Phí Thực Hiện</field>
+            <field name="res_model">research_project.kinhphithuchien</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menuitem for KinhPhiThucHien -->
+        <menuitem id="menu_research_project_kinhphithuchien"
+                  name="Kinh Phí Thực Hiện"
+                  parent="menu_research_project"
+                  action="action_kinhphithuchien"/>
+    </data>
+</odoo>

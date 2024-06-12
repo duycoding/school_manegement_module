@@ -1,0 +1,175 @@
+<odoo>
+    <data>
+        <!-- Form View for Research Project Proposal -->
+        <record id="view_research_project_proposal_form" model="ir.ui.view">
+            <field name="name">research.project.proposal.form</field>
+            <field name="model">research_project.detai</field>
+            <field name="arch" type="xml">
+                <form string="Thuyết Minh Đề Tài">
+                    <header>
+                        <button string="Tạo mới" type="object" name="create" class="oe_highlight"/>
+                        <button string="Sửa" type="object" name="write" class="oe_highlight"/>
+                        <button string="Xóa" type="object" name="unlink" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group string="Thông Tin Cơ Bản">
+                            <field name="name" string="1. Tên Đề Tài"/>
+                            <field name="maso_detai" string="2. Mã Số Đề Tài"/>
+                            <field name="chu_nhiem_detai_id" string="3. Chủ Nhiệm Đề Tài"/>
+                            <field name="tinh_cap_thiet" string="4. Tính Cấp Thiết"/>
+                            <field name="muc_tieu_detai" string="5. Mục Tiêu Đề Tài"/>
+                        </group>
+                        <notebook>
+                            <page string="Thông Tin Chương Trình">
+                                <group>
+                                    <field name="chuong_trinh" string="Thuộc Chương Trình"/>
+                                    <field name="maso_chuong_trinh" string="Mã số Chương trình"/>
+                                </group>
+                            </page>
+                            <page string="Phân Loại và Thời Gian">
+                                <group>
+                                    <field name="linh_vuc_uu_tien" widget="radio" string="Lĩnh vực ưu tiên"/>
+                                    <field name="linh_vuc_nghien_cuu" widget="radio" string="Lĩnh Vực Nghiên Cứu"/>
+                                    <field name="loai_hinh_nghien_cuu" widget="radio" string="Loại Hình Nghiên Cứu"/>
+                                    <field name="thoi_gian_bat_dau" string="Thời Gian Bắt Đầu"/>
+                                    <field name="thoi_gian_ket_thuc" string="Thời Gian Kết Thúc"/>
+                                </group>
+                            </page>
+                            <page string="Đơn Vị và Chủ Nhiệm">
+                                <group>
+                                    <field name="don_vi_chu_nhiem" string="Đơn Vị Chủ Nhiệm"/>
+                                    <field name="dien_thoai_don_vi" string="Điện Thoại"/>
+                                    <field name="email_don_vi" string="E-mail"/>
+                                    <field name="dia_chi_don_vi" string="Địa Chỉ"/>
+                                    <field name="thu_truong_don_vi" string="Thủ Trưởng Đơn Vị"/>
+                                </group>
+                            </page>
+                            <page string="Nghiên Cứu">
+                                <group>
+                                    <field name="doi_tuong_nghien_cuu" string="Đối Tượng Nghiên Cứu"/>
+                                    <field name="pham_vi_nghien_cuu" string="Phạm Vi Nghiên Cứu"/>
+                                    <field name="cach_tiep_can" string="Cách Tiếp Cận"/>
+                                    <field name="phuong_phap_nghien_cuu" string="Phương Pháp Nghiên Cứu"/>
+                                </group>
+                            </page>
+                            <page string="Sản Phẩm và Ứng Dụng">
+                                <group>
+                                    <field name="san_pham" string="Sản Phẩm"/>
+                                    <field name="phuong_thuc_chuyen_giao" string="Phương Thức Chuyển Giao"/>
+                                    <field name="dia_chi_ung_dung" string="Địa Chỉ Ứng Dụng"/>
+                                    <field name="tac_dong" string="Tác Động và Lợi Ích"/>
+                                </group>
+                            </page>
+<!--                            <page string="Kinh Phí">-->
+<!--                                <group>-->
+<!--                                    <field name="kinh_phi_thuc_hien" string="Kinh Phí Thực Hiện"/>-->
+<!--                                    <field name="nguon_kinh_phi" string="Nguồn Kinh Phí"/>-->
+<!--                                </group>-->
+<!--                            </page>-->
+                            <page string="Thành Viên và Đơn Vị Phối Hợp">
+                                <group>
+                                    <field name="thanh_vien_ids" string="Thành Viên"/>
+                                    <field name="don_vi_phoi_hop_ids" string="Đơn Vị Phối Hợp"/>
+                                </group>
+                            </page>
+<!--                            <page string="Tổng Quan Nghiên Cứu và Tiến Độ Thực Hiện">-->
+<!--                                <group>-->
+<!--                                    <field name="tong_quan_nghien_cuu_id" string="Tổng Quan Nghiên Cứu"/>-->
+<!--                                    <field name="tien_do_thuc_hien_ids" string="Tiến Độ Thực Hiện"/>-->
+<!--                                </group>-->
+<!--                            </page>-->
+                            <page string="Hợp Đồng Triển Khai và Dự Toán Kinh Phí">
+                                <group>
+                                    <field name="hop_dong_trien_khai_id" string="Hợp Đồng Triển Khai"/>
+                                    <field name="du_toan_kinh_phi_id" string="Dự Toán Kinh Phí"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_detai_tree" model="ir.ui.view">
+            <field name="name">detai.tree</field>
+            <field name="model">research_project.detai</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="maso_detai"/>
+                    <field name="chuong_trinh"/>
+                    <field name="maso_chuong_trinh"/>
+                    <field name="linh_vuc_uu_tien"/>
+                    <field name="linh_vuc_nghien_cuu"/>
+                    <field name="loai_hinh_nghien_cuu"/>
+                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <field name="don_vi_chu_nhiem"/>
+                    <field name="dien_thoai_don_vi"/>
+                    <field name="email_don_vi"/>
+                    <field name="dia_chi_don_vi"/>
+                    <field name="thu_truong_don_vi"/>
+                    <field name="tinh_cap_thiet"/>
+                    <field name="muc_tieu_detai"/>
+                    <field name="doi_tuong_nghien_cuu"/>
+                    <field name="pham_vi_nghien_cuu"/>
+                    <field name="cach_tiep_can"/>
+                    <field name="phuong_phap_nghien_cuu"/>
+                    <field name="san_pham"/>
+                    <field name="phuong_thuc_chuyen_giao"/>
+                    <field name="dia_chi_ung_dung"/>
+                    <field name="tac_dong"/>
+                    <field name="kinh_phi_thuc_hien"/>
+                    <field name="nguon_kinh_phi"/>
+                    <!-- Many2one fields -->
+                    <field name="chu_nhiem_detai_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Kanban View -->
+        <record id="view_detai_kanban" model="ir.ui.view">
+            <field name="name">research_project.detai.kanban</field>
+            <field name="model">research_project.detai</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="maso_detai"/>
+                    <field name="chuong_trinh"/>
+                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+                                    <div>Mã Số:
+                                        <field name="maso_detai"/>
+                                    </div>
+                                    <div>Chương Trình:
+                                        <field name="chuong_trinh"/>
+                                    </div>
+                                    <div>Thời Gian:
+                                        <field name="thoi_gian_bat_dau"/>
+                                        đến
+                                        <field name="thoi_gian_ket_thuc"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_detai" model="ir.actions.act_window">
+            <field name="name">De Tai</field>
+            <field name="res_model">research_project.detai</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+    </data>
+</odoo>
