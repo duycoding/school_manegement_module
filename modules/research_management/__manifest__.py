@@ -13,6 +13,7 @@
         'views/menu.xml',
         'views/kinhphi_template.xml',
         'views/tiendothuchien_template.xml',
+        'views/dangkydetai_template.xml',
     ],
     'installable': True,
     'auto_install': False,

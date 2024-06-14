@@ -1,0 +1,138 @@
+<odoo>
+    <template id="dangkydetai_template" name="Đăng Ký Đề Tài">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Đăng Ký Đề Tài</h1>
+                <form action="/dangkydetai/submit" method="post">
+                    <!-- Thêm mã CSRF vào form -->
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div class="form-group">
+                        <label for="name">Tên Đề Tài</label>
+                        <input type="text" name="name" class="form-control" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="maso_detai">Mã Số Đề Tài</label>
+                        <input type="text" name="maso_detai" class="form-control" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="chuong_trinh">Chương Trình</label>
+                        <input type="text" name="chuong_trinh" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="maso_chuong_trinh">Mã Số Chương Trình</label>
+                        <input type="text" name="maso_chuong_trinh" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="linh_vuc_uu_tien">Lĩnh Vực Ưu Tiên</label>
+                        <select name="linh_vuc_uu_tien" class="form-control">
+                            <option value="khoa_hoc_co_ban">Khoa học cơ bản</option>
+                            <option value="cong_nghe_cao_nong_nghiep">Công nghệ cao trong nông nghiệp, thủy sản và phát triển bền vững</option>
+                            <option value="moi_truong">Môi trường, tài nguyên thiên nhiên và biến đổi khí hậu</option>
+                            <option value="cong_nghe_thong_tin">Công nghệ, công nghệ thông tin và chuyển đổi số</option>
+                            <option value="khoa_hoc_giao_duc">Khoa học giáo dục, luật và xã hội nhân văn</option>
+                            <option value="phat_trien_kinh_te">Phát triển kinh tế, thị trường và nông thôn</option>
+                            <option value="cong_nghe_sinh_hoc">Công nghệ sinh học và thực phẩm</option>
+                            <option value="khong_thuoc_uu_tien">Không thuộc 7 Lĩnh vực ưu tiên</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="linh_vuc_nghien_cuu">Lĩnh Vực Nghiên Cứu</label>
+                        <select name="linh_vuc_nghien_cuu" class="form-control">
+                            <option value="khoa_hoc_tu_nhien">Khoa học Tự nhiên</option>
+                            <option value="khoa_hoc_ky_thuat">Khoa học Kỹ thuật và Công nghệ</option>
+                            <option value="khoa_hoc_y_duoc">Khoa học Y, dược</option>
+                            <option value="khoa_hoc_nong_nghiep">Khoa học Nông nghiệp</option>
+                            <option value="khoa_hoc_xa_hoi">Khoa học Xã hội</option>
+                            <option value="khoa_hoc_nhan_van">Khoa học Nhân văn</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="loai_hinh_nghien_cuu">Loại Hình Nghiên Cứu</label>
+                        <select name="loai_hinh_nghien_cuu" class="form-control">
+                            <option value="co_ban">Cơ bản</option>
+                            <option value="ung_dung">Ứng dụng</option>
+                            <option value="trien_khai">Triển khai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="thoi_gian_bat_dau">Thời Gian Bắt Đầu</label>
+                        <input type="date" name="thoi_gian_bat_dau" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="thoi_gian_ket_thuc">Thời Gian Kết Thúc</label>
+                        <input type="date" name="thoi_gian_ket_thuc" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="don_vi_chu_nhiem">Đơn Vị Chủ Nhiệm</label>
+                        <input type="text" name="don_vi_chu_nhiem" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="dien_thoai_don_vi">Điện Thoại Đơn Vị</label>
+                        <input type="text" name="dien_thoai_don_vi" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_don_vi">Email Đơn Vị</label>
+                        <input type="email" name="email_don_vi" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="dia_chi_don_vi">Địa Chỉ Đơn Vị</label>
+                        <input type="text" name="dia_chi_don_vi" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="thu_truong_don_vi">Thủ Trưởng Đơn Vị</label>
+                        <input type="text" name="thu_truong_don_vi" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="tinh_cap_thiet">Tính Cấp Thiết</label>
+                        <textarea name="tinh_cap_thiet" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="muc_tieu_detai">Mục Tiêu Đề Tài</label>
+                        <textarea name="muc_tieu_detai" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="doi_tuong_nghien_cuu">Đối Tượng Nghiên Cứu</label>
+                        <textarea name="doi_tuong_nghien_cuu" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="pham_vi_nghien_cuu">Phạm Vi Nghiên Cứu</label>
+                        <textarea name="pham_vi_nghien_cuu" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="cach_tiep_can">Cách Tiếp Cận</label>
+                        <textarea name="cach_tiep_can" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="phuong_phap_nghien_cuu">Phương Pháp Nghiên Cứu</label>
+                        <textarea name="phuong_phap_nghien_cuu" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="san_pham">Sản Phẩm</label>
+                        <textarea name="san_pham" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="phuong_thuc_chuyen_giao">Phương Thức Chuyển Giao</label>
+                        <textarea name="phuong_thuc_chuyen_giao" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="dia_chi_ung_dung">Địa Chỉ Ứng Dụng</label>
+                        <textarea name="dia_chi_ung_dung" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tac_dong">Tác Động và Lợi Ích</label>
+                        <textarea name="tac_dong" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="kinh_phi_thuc_hien">Kinh Phí Thực Hiện</label>
+                        <input type="number" step="0.01" name="kinh_phi_thuc_hien" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="nguon_kinh_phi">Nguồn Kinh Phí</label>
+                        <textarea name="nguon_kinh_phi" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

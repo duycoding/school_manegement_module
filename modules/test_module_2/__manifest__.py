@@ -1,18 +1,22 @@
-# -*- coding: utf-8 -*-
+# library_management/__manifest__.py
 {
-    'name': 'Test Module 2',
-    'summary': 'Đây là module test thử lần 2',
+    'name': 'Library Management',
     'version': '1.0',
+    'summary': 'Module quản lý thư viện',
     'sequence': -100,
-    'website': 'https://www.yourwebsite.com',
+    'description': """
+        Mô-đun quản lý thư viện đơn giản
+    """,
     'category': 'Uncategorized',
+    'author': 'Your Name',
+    'website': 'https://yourwebsite.com',
     'depends': ['base'],
     'data': [
-        # Add your data files here
+        'security/ir.model.access.csv',
+        'views/book_views.xml',
     ],
-    'demo': [
-        # Add your demo files here
-    ],
+    'installable': True,
+    'auto_install': False,
     'application': True,
     'license': 'LGPL-3',
 }

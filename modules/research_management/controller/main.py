@@ -33,3 +33,40 @@ class ResearchProject(http.Controller):
             'tiendo_records': tiendo_records
         }
         return request.render('research_management.tiendothuchien_template', values)
+
+    @http.route('/dangkydetai', type='http', auth='public', website=True)
+    def dangky_detai(self, **kwargs):
+        return request.render('research_management.dangkydetai_template', {})
+
+    @http.route('/dangkydetai/submit', type='http', auth='public', website=True, methods=['POST'])
+    def dangky_detai_submit(self, **kwargs):
+        request.env['research_project.detai'].sudo().create({
+            'name': kwargs.get('name'),
+            'maso_detai': kwargs.get('maso_detai'),
+            'chuong_trinh': kwargs.get('chuong_trinh'),
+            'maso_chuong_trinh': kwargs.get('maso_chuong_trinh'),
+            'linh_vuc_uu_tien': kwargs.get('linh_vuc_uu_tien'),
+            'linh_vuc_nghien_cuu': kwargs.get('linh_vuc_nghien_cuu'),
+            'loai_hinh_nghien_cuu': kwargs.get('loai_hinh_nghien_cuu'),
+            'thoi_gian_bat_dau': kwargs.get('thoi_gian_bat_dau'),
+            'thoi_gian_ket_thuc': kwargs.get('thoi_gian_ket_thuc'),
+            'don_vi_chu_nhiem': kwargs.get('don_vi_chu_nhiem'),
+            'dien_thoai_don_vi': kwargs.get('dien_thoai_don_vi'),
+            'email_don_vi': kwargs.get('email_don_vi'),
+            'dia_chi_don_vi': kwargs.get('dia_chi_don_vi'),
+            'thu_truong_don_vi': kwargs.get('thu_truong_don_vi'),
+            'tinh_cap_thiet': kwargs.get('tinh_cap_thiet'),
+            'muc_tieu_detai': kwargs.get('muc_tieu_detai'),
+            'doi_tuong_nghien_cuu': kwargs.get('doi_tuong_nghien_cuu'),
+            'pham_vi_nghien_cuu': kwargs.get('pham_vi_nghien_cuu'),
+            'cach_tiep_can': kwargs.get('cach_tiep_can'),
+            'phuong_phap_nghien_cuu': kwargs.get('phuong_phap_nghien_cuu'),
+            'san_pham': kwargs.get('san_pham'),
+            'phuong_thuc_chuyen_giao': kwargs.get('phuong_thuc_chuyen_giao'),
+            'dia_chi_ung_dung': kwargs.get('dia_chi_ung_dung'),
+            'tac_dong': kwargs.get('tac_dong'),
+            'kinh_phi_thuc_hien': kwargs.get('kinh_phi_thuc_hien'),
+            'nguon_kinh_phi': kwargs.get('nguon_kinh_phi'),
+            # Add other fields as needed
+        })
+        return request.redirect('/dangkydetai')
