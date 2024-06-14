@@ -69,4 +69,4 @@ class ResearchProject(http.Controller):
             'nguon_kinh_phi': kwargs.get('nguon_kinh_phi'),
             # Add other fields as needed
         })
-        return request.redirect('/dangkydetai')
+        return request.redirect('/detai_view')
