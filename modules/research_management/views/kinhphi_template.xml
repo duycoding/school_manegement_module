@@ -1,0 +1,31 @@
+<odoo>
+    <template id="kinhphi_template" name="View Kinh Phi Thuc Hien">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Danh Sách Kinh Phí Thực Hiện</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Đề Tài</th>
+                            <th>Khoản Chi</th>
+                            <th>Nguồn Kinh Phí Trường Cấp</th>
+                            <th>Nguồn Kinh Phí Khác</th>
+                            <th>Tổng Kinh Phí</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="kinhphi_records" t-as="record">
+                            <tr>
+                                <td><t t-esc="record.detai_id.name"/></td>
+                                <td><t t-esc="record.khoan_chi"/></td>
+                                <td><t t-esc="record.nguon_kinh_phi_truong_cap"/></td>
+                                <td><t t-esc="record.nguon_kinh_phi_khac"/></td>
+                                <td><t t-esc="record.tong_kinh_phi"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

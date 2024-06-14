@@ -1,0 +1,33 @@
+<odoo>
+    <template id="tiendothuchien_template" name="Danh Sách Tiến Độ Thực Hiện">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Danh Sách Tiến Độ Thực Hiện</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Đề Tài</th>
+                            <th>Nội Dung Công Việc</th>
+                            <th>Sản Phẩm</th>
+                            <th>Thời Gian Bắt Đầu</th>
+                            <th>Thời Gian Kết Thúc</th>
+                            <th>Người Thực Hiện</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="tiendo_records" t-as="record">
+                            <tr>
+                                <td><t t-esc="record.detai_id.name"/></td>
+                                <td><t t-esc="record.noi_dung_cong_viec"/></td>
+                                <td><t t-esc="record.san_pham"/></td>
+                                <td><t t-esc="record.thoi_gian_bat_dau"/></td>
+                                <td><t t-esc="record.thoi_gian_ket_thuc"/></td>
+                                <td><t t-esc="record.nguoi_thuc_hien"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

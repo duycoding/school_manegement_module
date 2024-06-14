@@ -8,11 +8,11 @@
                 <form string="Kinh Phí Thực Hiện">
                     <sheet>
                         <group>
+                            <field name="detai_id"/>
                             <field name="khoan_chi"/>
-                            <field name="tong_kinh_phi"/>
                             <field name="nguon_kinh_phi_truong_cap"/>
                             <field name="nguon_kinh_phi_khac"/>
-                            <field name="detai_id"/>
+                            <field name="tong_kinh_phi"/>
                         </group>
                     </sheet>
                 </form>
@@ -25,11 +25,11 @@
             <field name="model">research_project.kinhphithuchien</field>
             <field name="arch" type="xml">
                 <tree string="Kinh Phí Thực Hiện">
+                    <field name="detai_id"/>
                     <field name="khoan_chi"/>
-                    <field name="tong_kinh_phi"/>
                     <field name="nguon_kinh_phi_truong_cap"/>
                     <field name="nguon_kinh_phi_khac"/>
-                    <field name="detai_id"/>
+                    <field name="tong_kinh_phi"/>
                 </tree>
             </field>
         </record>

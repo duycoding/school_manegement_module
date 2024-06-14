@@ -6,12 +6,13 @@
     'sequence': -100,
     'website': 'https://www.yourwebsite.com',
     'category': 'Uncategorized',
-    'depends': ['base'],
+    'depends': ['base', 'auth_signup'],
     'data': [
         # Add your data files here
         'security/ir.model.access.csv',
         'views/student_views.xml',
         'data/student_demo.xml',
+        'views/auth_signup.xml',
     ],
     'demo': [
         # Add your demo files here
