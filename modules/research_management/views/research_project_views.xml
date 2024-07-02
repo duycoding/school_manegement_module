@@ -1,6 +1,5 @@
 <odoo>
     <data>
-        <!-- Form View for Research Project Proposal -->
         <record id="view_research_project_proposal_form" model="ir.ui.view">
             <field name="name">research.project.proposal.form</field>
             <field name="model">research_project.detai</field>
@@ -10,6 +9,7 @@
                         <button string="Tạo mới" type="object" name="create" class="oe_highlight"/>
                         <button string="Sửa" type="object" name="write" class="oe_highlight"/>
                         <button string="Xóa" type="object" name="unlink" class="oe_highlight"/>
+                        <button name="%(action_report_research_project)d" string="Print Report" type="action"/>
                     </header>
                     <sheet>
                         <group string="Thông Tin Cơ Bản">
@@ -60,24 +60,12 @@
                                     <field name="tac_dong" string="Tác Động và Lợi Ích"/>
                                 </group>
                             </page>
-<!--                            <page string="Kinh Phí">-->
-<!--                                <group>-->
-<!--                                    <field name="kinh_phi_thuc_hien" string="Kinh Phí Thực Hiện"/>-->
-<!--                                    <field name="nguon_kinh_phi" string="Nguồn Kinh Phí"/>-->
-<!--                                </group>-->
-<!--                            </page>-->
                             <page string="Thành Viên và Đơn Vị Phối Hợp">
                                 <group>
                                     <field name="thanh_vien_ids" string="Thành Viên"/>
                                     <field name="don_vi_phoi_hop_ids" string="Đơn Vị Phối Hợp"/>
                                 </group>
                             </page>
-<!--                            <page string="Tổng Quan Nghiên Cứu và Tiến Độ Thực Hiện">-->
-<!--                                <group>-->
-<!--                                    <field name="tong_quan_nghien_cuu_id" string="Tổng Quan Nghiên Cứu"/>-->
-<!--                                    <field name="tien_do_thuc_hien_ids" string="Tiến Độ Thực Hiện"/>-->
-<!--                                </group>-->
-<!--                            </page>-->
                             <page string="Hợp Đồng Triển Khai và Dự Toán Kinh Phí">
                                 <group>
                                     <field name="hop_dong_trien_khai_id" string="Hợp Đồng Triển Khai"/>
@@ -122,7 +110,6 @@
                     <field name="tac_dong"/>
                     <field name="kinh_phi_thuc_hien"/>
                     <field name="nguon_kinh_phi"/>
-                    <!-- Many2one fields -->
                     <field name="chu_nhiem_detai_id"/>
                 </tree>
             </field>

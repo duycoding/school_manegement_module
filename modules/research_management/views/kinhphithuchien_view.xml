@@ -33,10 +33,48 @@
                 </tree>
             </field>
         </record>
+
+        <!-- Kanban View for KinhPhiThucHien -->
+        <record id="view_kinhphithuchien_kanban" model="ir.ui.view">
+            <field name="name">kinhphithuchien.kanban</field>
+            <field name="model">research_project.kinhphithuchien</field>
+            <field name="arch" type="xml">
+                <kanban string="Kinh Phí Thực Hiện">
+                    <field name="detai_id"/>
+                    <field name="khoan_chi"/>
+                    <field name="nguon_kinh_phi_truong_cap"/>
+                    <field name="nguon_kinh_phi_khac"/>
+                    <field name="tong_kinh_phi"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <strong>
+                                    <field name="detai_id"/>
+                                </strong>
+                                <div>Khoản chi:
+                                    <field name="khoan_chi"/>
+                                </div>
+                                <div>Nguồn kinh phí trường cấp:
+                                    <field name="nguon_kinh_phi_truong_cap"/>
+                                </div>
+                                <div>Nguồn kinh phí khác:
+                                    <field name="nguon_kinh_phi_khac"/>
+                                </div>
+                                <div>Tổng kinh phí:
+                                    <field name="tong_kinh_phi"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Action for KinhPhiThucHien -->
         <record id="action_kinhphithuchien" model="ir.actions.act_window">
             <field name="name">Kinh Phí Thực Hiện</field>
             <field name="res_model">research_project.kinhphithuchien</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
 
         <!-- Menuitem for KinhPhiThucHien -->

@@ -6,6 +6,8 @@
     'depends': ['base', 'website'],
     'data': [
         'security/ir.model.access.csv',
+        'reports/detai_report.xml',
+        'views/action_report_detai.xml',
         'views/research_project_views.xml',
         'views/view_detai.xml',
         'views/kinhphithuchien_view.xml',

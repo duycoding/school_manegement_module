@@ -35,10 +35,52 @@
                 </tree>
             </field>
         </record>
+
+        <!-- Kanban View for TienDoThucHien -->
+        <record id="view_tiendothuchien_kanban" model="ir.ui.view">
+            <field name="name">tiendothuchien.kanban</field>
+            <field name="model">research_project.tiendothuchien</field>
+            <field name="arch" type="xml">
+                <kanban string="Tiến Độ Thực Hiện">
+                    <field name="noi_dung_cong_viec"/>
+                    <field name="san_pham"/>
+                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <field name="nguoi_thuc_hien"/>
+                    <field name="detai_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <strong>
+                                    <field name="detai_id"/>
+                                </strong>
+                                <div>Nội dung công việc:
+                                    <field name="noi_dung_cong_viec"/>
+                                </div>
+                                <div>Sản phẩm:
+                                    <field name="san_pham"/>
+                                </div>
+                                <div>Thời gian bắt đầu:
+                                    <field name="thoi_gian_bat_dau"/>
+                                </div>
+                                <div>Thời gian kết thúc:
+                                    <field name="thoi_gian_ket_thuc"/>
+                                </div>
+                                <div>Người thực hiện:
+                                    <field name="nguoi_thuc_hien"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Action for TienDoThucHien -->
         <record id="action_tiendothuchien" model="ir.actions.act_window">
             <field name="name">Tiến Độ Thực Hiện</field>
             <field name="res_model">research_project.tiendothuchien</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
 
         <!-- Menuitem for TienDoThucHien -->

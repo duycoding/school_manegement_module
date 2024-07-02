@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_research_project">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>
+                        <span t-field="doc.name"/>
+                    </h2>
+                    <div>
+                        <strong>Mã Số Đề Tài: </strong>
+                        <span t-field="doc.maso_detai"/>
+                    </div>
+                    <div>
+                        <strong>Chương Trình: </strong>
+                        <span t-field="doc.chuong_trinh"/>
+                    </div>
+                    <div>
+                        <strong>Mã Số Chương Trình: </strong>
+                        <span t-field="doc.maso_chuong_trinh"/>
+                    </div>
+                    <div>
+                        <strong>Thời Gian Bắt Đầu: </strong>
+                        <span t-field="doc.thoi_gian_bat_dau"/>
+                    </div>
+                    <div>
+                        <strong>Thời Gian Kết Thúc: </strong>
+                        <span t-field="doc.thoi_gian_ket_thuc"/>
+                    </div>
+                    <!-- Add other fields as needed -->
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

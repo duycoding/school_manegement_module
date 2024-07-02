@@ -1,4 +1,5 @@
-from odoo import models, fields
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 
 class DeTai(models.Model):
@@ -67,3 +68,18 @@ class DeTai(models.Model):
     kinh_phi_thuc_hien_id = fields.Many2one('research_project.kinhphithuchien', string='Kinh Phí Thực Hiện')
     hop_dong_trien_khai_id = fields.Many2one('research_project.hopdongtrienkhai', string='Hợp Đồng Triển Khai')
     du_toan_kinh_phi_id = fields.Many2one('research_project.dutoankinhphi', string='Dự Toán Kinh Phí')
+
+    @api.constrains('thoi_gian_bat_dau', 'thoi_gian_ket_thuc')
+    def _check_dates(self):
+        for record in self:
+            if record.thoi_gian_bat_dau and record.thoi_gian_ket_thuc:
+                if record.thoi_gian_bat_dau > record.thoi_gian_ket_thuc:
+                    raise ValidationError('Thời gian kết thúc phải sau thời gian bắt đầu!')
+
+    @api.constrains('maso_detai')
+    def _check_unique_maso_detai(self):
+        for record in self:
+            existing_record = self.env['research_project.detai'].search(
+                [('maso_detai', '=', record.maso_detai), ('id', '!=', record.id)])
+            if existing_record:
+                raise ValidationError('Mã số đề tài này đã tồn tại!')

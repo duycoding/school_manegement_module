@@ -1,0 +1,10 @@
+<odoo>
+    <record id="action_report_research_project" model="ir.actions.report">
+    <field name="name">Report Research Projects</field>
+    <field name="type">ir.actions.report</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="model">research_project.detai</field>
+    <field name="report_name">research_management.report_research_project</field>
+    <field name="binding_model_id" ref="model_research_project_detai"/>
+</record>
+</odoo>

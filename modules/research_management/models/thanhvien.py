@@ -5,7 +5,7 @@ class ThanhVien(models.Model):
     _description = 'Thành Viên Tham Gia Nghiên Cứu'
 
     name = fields.Char(string='Họ và Tên', required=True)
-    msvc = fields.Char(string='Mã Số Viên Chức')
+    msvc = fields.Char(string='Mã Số Viên Chức', unique=True)
     chuc_danh = fields.Char(string='Chức Danh')
     don_vi_cong_tac = fields.Char(string='Đơn Vị Công Tác')
     linh_vuc_chuyen_mon = fields.Char(string='Lĩnh Vực Chuyên Môn')
